@@ -1,0 +1,18 @@
+class Error:
+    def handle_message(self):
+        return "Помилка: Щось пішло не так"
+
+class Success:
+    def handle_message(self):
+        return "Успіх: Все виконано успішно"
+# Створення екземплярів класів Error і Success
+error_handler = Error()
+success_handler = Success()
+
+# Виклик обробників для класу "Begin"
+print(error_handler.handle_message())  # Виведе: "Помилка: Щось пішло не так"
+print(success_handler.handle_message())  # Виведе: "Успіх: Все виконано успішно"
+
+# Виклик обробників для класу "Thi-five"
+print(error_handler.handle_message())  # Виведе: "Помилка: Щось пішло не так"
+print(success_handler.handle_message())  # Виведе: "Успіх: Все виконано успішно"
